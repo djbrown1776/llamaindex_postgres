@@ -1,0 +1,23 @@
+volumes:
+  llamaindex_dev_postgres_data:
+    driver: local
+
+services:
+  pgdatabase:
+    image: ankane/pgvector:latest  # Use the pgvector-enabled PostgreSQL image
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: llamaindex-dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - llamaindex_dev_postgres_data:/var/lib/postgresql
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - "8085:80"

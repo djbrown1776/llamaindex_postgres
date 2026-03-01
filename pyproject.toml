@@ -1,0 +1,21 @@
+[project]
+name = "ucl-rag-pipeline"
+version = "0.1.0"
+description = "End-to-end RAG pipeline: BallDontLie API → Postgres (pgvector) → dbt → LlamaIndex embeddings → Streamlit chat UI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "balldontlie>=0.1.6",
+    "dbt-postgres>=1.10.0",
+    "dotenv>=0.9.9",
+    "llama-index>=0.14.15",
+    "llama-index-embeddings-mistralai>=0.4.1",
+    "llama-index-llms-mistralai>=0.10.0.post2",
+    "llama-index-vector-stores-postgres>=0.7.3",
+    "pgvector>=0.4.2",
+    "plotly>=6.6.0",
+    "psycopg2-binary>=2.9.11",
+    "requests>=2.32.5",
+    "sqlalchemy>=2.0.47",
+    "streamlit>=1.55.0",
+]

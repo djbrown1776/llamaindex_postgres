@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: ucl
+    database: llamaindex-dev
+    schema: public
+    tables:
+      - name: ucl_players
+      - name: ucl_standings

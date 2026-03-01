@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: mart_players_for_embedding
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: embedding_text
+        tests:
+          - not_null
+
+  - name: mart_standings_for_embedding
+    columns:
+      - name: team_id
+        tests:
+          - not_null
+      - name: embedding_text
+        tests:
+          - not_null

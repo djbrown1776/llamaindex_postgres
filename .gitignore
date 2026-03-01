@@ -1,0 +1,38 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Build artifacts 
+dist/
+build/
+*.egg-info/
+
+# Local development settings 
+.env
+.vscode/
+.idea/
+
+# Operating System
+.DS_Store
+
+# Testing and Type Checking
+.pytest_cache/
+.mypy_cache/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Application Data
+storage/
+chroma_db/
+*.log
+
+# Dependency lock file (large, not needed for reproducibility in this project)
+uv.lock
