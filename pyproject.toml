@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "balldontlie>=0.1.6",
     "dbt-postgres>=1.10.0",
-    "dotenv>=0.9.9",
+    "python-dotenv>=1.0.0",
     "llama-index>=0.14.15",
     "llama-index-embeddings-mistralai>=0.4.1",
     "llama-index-llms-mistralai>=0.10.0.post2",

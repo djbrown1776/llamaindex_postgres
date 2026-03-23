@@ -8,14 +8,13 @@ from urllib3.util.retry import Retry
 
 from config import BALLDONTLIE_API_KEY, DATABASE_URL
 
-API_KEY = BALLDONTLIE_API_KEY
 BASE_URL = "https://api.balldontlie.io/ucl/v1"
 
 # SQLAlchemy engine
 engine = create_engine(DATABASE_URL.replace("postgresql://", "postgresql+psycopg2://"))
 
 session = requests.Session()
-session.headers.update({"Authorization": API_KEY})
+session.headers.update({"Authorization": BALLDONTLIE_API_KEY})
 session.mount("https://", HTTPAdapter(max_retries=Retry(
     total=5,
     backoff_factor=2,     # waits 2s, 4s, 8s, 16s, 32s between retries
@@ -67,7 +66,7 @@ def ingest(endpoint: str, table_name: str):
 
 
 def main():
-    if not API_KEY:
+    if not BALLDONTLIE_API_KEY:
         print("❌ Missing BALLDONTLIE_API_KEY")
         return
 

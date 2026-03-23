@@ -1,5 +1,5 @@
 volumes:
-  llamaindex_dev_postgres_data:
+  ucl_rag_postgres_data:
     driver: local
 
 services:
@@ -8,11 +8,11 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: llamaindex-dev
+      POSTGRES_DB: ucl-dev
     ports:
       - "5432:5432"
     volumes:
-      - llamaindex_dev_postgres_data:/var/lib/postgresql
+      - ucl_rag_postgres_data:/var/lib/postgresql
 
   pgadmin:
     image: dpage/pgadmin4
